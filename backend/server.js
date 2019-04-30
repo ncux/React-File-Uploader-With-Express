@@ -7,7 +7,6 @@ const app = express();
 
 app.use(fileUpload());
 
-
 // file upload endpoint
 app.post('/upload', async (req, res) => {
     if(!req.files) {
@@ -25,9 +24,6 @@ app.post('/upload', async (req, res) => {
         res.status(200).send('File successfully uploaded');
     });
 });
-
-
-
 
 
 app.listen(port, () => console.log(`Server running on port ${port}`));

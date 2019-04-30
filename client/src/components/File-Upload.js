@@ -9,7 +9,7 @@ function FileUploader() {
 
     const [file, setFile] = useState('');
     const [filename, setFilename] = useState('Select file');  // sets the input label only
-    const [uploadedFile, setUploadedFile] = useState({});  // only applicable for when the uploads where saved in the client
+    const [uploadedFile, setUploadedFile] = useState({});  // only applicable for when the uploads are saved in the client
     const [message, setMessage] = useState('');
     const [uploadProgress, setUploadProgress] = useState(0);
 
@@ -21,9 +21,9 @@ function FileUploader() {
     const onFileUpload = async e => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append('file', file);       // what's appended must match the req.files.file at the backend
+        formData.append('file', file);       // what's appended must match req.files.file at the backend
 
-        const serverUrl = `http://127.0.0.1:5000`;  // uses this URL to store in the backend's "public" folder
+        // const serverUrl = `http://127.0.0.1:5000`  // uses this URL to store in the backend's "public" folder
 
         try {
             const response = await axios.post(`/upload`, formData, {
@@ -68,11 +68,6 @@ function FileUploader() {
 
                 <input type="submit" value="Upload" className="btn btn-primary btn-block"/>
             </form>
-
-
-
-
-
 
 
 

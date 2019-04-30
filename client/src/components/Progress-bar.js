@@ -15,6 +15,4 @@ function Progress(props) {
     )
 }
 
-
-
 export default Progress;

@@ -2,10 +2,7 @@ import React from 'react';
 import './App.css';
 import FileUploader from "./components/File-Upload";
 
-
 function App() {
-
-
 
   return (
     <div className="container mt-4">
